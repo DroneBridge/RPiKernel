@@ -11,7 +11,8 @@ Compile for Armv6 (Pi0) & Armv7 (Pi2+) using the instructions given here:
 1. Rename the provided config files for both architectures to `.conf` depending what kernel you are building.
 2. `KERNEL=kernel` or `KERNEL=kernel7`
 3. `make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig` to configure the kernel for your needs
-4. Use the correct location of your mounted SD card/DroneBridge patitions (see raspberrypi.org docs). We use `/dev/sddx` here:
+4. Compile the kernel using `make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs -j 8` where 8 is your CPU core count
+5. Use the correct location of your mounted SD card/DroneBridge patitions (see raspberrypi.org docs). We use `/dev/sddx` here:
 
 ```bash
 mkdir mnt
