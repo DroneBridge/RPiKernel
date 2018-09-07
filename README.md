@@ -28,3 +28,13 @@ sudo cp arch/arm/boot/dts/overlays/README mnt/fat32/overlays/
 sudo umount mnt/fat32
 sudo umount mnt/ext4
 ```
+
+# How to apply patches
+
+To apply the patches copy the .patch file to the kernel root src directory run `patch -p0 < db_kernel_xxx.patch`
+
+
+# Credits
+
+* Initial patches provided by rodizio1 in the EZ-Wifibroadcast project
+* Updated patches and Kernel for DroneBridge by seeul8er
