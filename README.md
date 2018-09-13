@@ -8,6 +8,8 @@ Compile for Armv6 (Pi0) & Armv7 (Pi2+) using the instructions given here:
 * https://www.raspberrypi.org/documentation/linux/kernel/building.md
 * https://www.raspberrypi.org/documentation/linux/kernel/configuring.md
 
+Copy the `db.txt` to `drivers/net/wireless` and enable `CONFIG_CFG80211_INTERNAL_REGDB=y` in the `.conf` files, if you want to built a new kernel without using the provided source code under "releases" in this repository.
+
 1. Rename the provided config files for both architectures to `.conf` depending what kernel you are building.
 2. `KERNEL=kernel` or `KERNEL=kernel7`
 3. `make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig` to configure the kernel for your needs
