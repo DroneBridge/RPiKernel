@@ -1,0 +1,12 @@
+diff --git a/target_firmware/wlan/if_owl.c b/target_firmware/wlan/if_owl.c
+index 6dda78c..5ef1b2a 100755
+--- a/target_firmware/wlan/if_owl.c
++++ b/target_firmware/wlan/if_owl.c
+@@ -967,6 +967,7 @@ ath_tgt_tx_send_normal(struct ath_softc_tgt *sc, struct ath_tx_buf *bf)
+ 		ath_tgt_rate_findrate(sc, an, shortPreamble,
+ 				      0, 0, 0, 0, 0,
+ 				      rcs, &isProbe);
++		if ((rcs[0].flags & ATH_RC_RTSCTS_FLAG) != ATH_RC_RTSCTS_FLAG) {rcs[0].flags |= ATH_RC_RTSCTS_FLAG;}
+ 		ath_hal_memcpy(bf->bf_rcs, rcs, sizeof(rcs));
+ 	} else {
+ 		struct ath_vap_target *avp;
