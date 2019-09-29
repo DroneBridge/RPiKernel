@@ -1,0 +1,26 @@
+diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/bcdc.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/bcdc.c
+index 144e0b83b24b..c1011c3ae3a9 100644
+--- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/bcdc.c
++++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/bcdc.c
+@@ -279,7 +279,7 @@ brcmf_proto_bcdc_hdrpush(struct brcmf_pub *drvr, int ifidx, u8 offset,
+ 	if (pktbuf->ip_summed == CHECKSUM_PARTIAL)
+ 		h->flags |= BCDC_FLAG_SUM_NEEDED;
+ 
+-	h->priority = (pktbuf->priority & BCDC_PRIORITY_MASK);
++	h->priority = 0;
+ 	h->flags2 = 0;
+ 	h->data_offset = offset;
+ 	BCDC_SET_IF_IDX(h, ifidx);
+diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/core.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/core.c
+index 17e2fdf212de..d82423c26fe2 100644
+--- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/core.c
++++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/core.c
+@@ -1041,7 +1041,7 @@ static int brcmf_bus_started(struct brcmf_pub *drvr, struct cfg80211_ops *ops)
+ 	brcmf_dbg(TRACE, "\n");
+ 
+ 	/* add primary networking interface */
+-	ifp = brcmf_add_if(drvr, 0, 0, false, "wlan%d", NULL);
++	ifp = brcmf_add_if(drvr, 0, 0, false, "intwifi%d", NULL);
+ 	if (IS_ERR(ifp))
+ 		return PTR_ERR(ifp);
+ 
