@@ -1,0 +1,55 @@
+wmmrule ETSI:
+	vo_c: cw_min=3, cw_max=7, aifsn=2, cot=2
+	vi_c: cw_min=7, cw_max=15, aifsn=2, cot=4
+	be_c: cw_min=15, cw_max=1023, aifsn=3, cot=6
+	bk_c: cw_min=15, cw_max=1023, aifsn=7, cot=6
+	vo_ap: cw_min=3, cw_max=7, aifsn=1, cot=2
+	vi_ap: cw_min=7, cw_max=15, aifsn=1, cot=4
+	be_ap: cw_min=15, cw_max=63, aifsn=3, cot=6
+	bk_ap: cw_min=15, cw_max=1023, aifsn=7, cot=6
+
+# This is the world regulatory domain
+ country 00:
+ 	(2302 - 2742 @ 40), (30)
+ 	(4910 - 6110 @ 160), (30)
+ 	(57240 - 63720 @ 2160), (0)
+ 
+ country DE:
+ 	(2302 - 2742 @ 40), (30)
+ 	(4910 - 6110 @ 160), (30)
+ 
+ country AT:
+ 	(2302 - 2742 @ 40), (30)
+ 	(4910 - 6110 @ 160), (30)
+ 
+ country CH:
+ 	(2302 - 2742 @ 40), (30)
+ 	(4910 - 6110 @ 160), (30)
+ 
+ country TW:
+ 	(2302 - 2742 @ 40), (30)
+ 	(4910 - 6110 @ 160), (30)
+ 
+ country AU:
+ 	(2302 - 2742 @ 40), (30)
+ 	(4910 - 6110 @ 160), (30)
+ 
+ country CA:
+ 	(2302 - 2742 @ 40), (30)
+ 	(4910 - 6110 @ 160), (30)
+ 
+ country US:
+ 	(2302 - 2742 @ 40), (30)
+ 	(4910 - 6110 @ 160), (30)
+ 
+ country BO:
+ 	(2302 - 2742 @ 40), (30)
+ 	(4910 - 6110 @ 160), (30)
+ 
+ country GB:
+ 	(2302 - 2742 @ 40), (30)
+ 	(4910 - 6110 @ 160), (30)
+ 
+ country CN:
+ 	(2302 - 2742 @ 40), (30)
+ 	(4910 - 6110 @ 160), (30)
