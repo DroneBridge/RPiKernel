@@ -1,4 +1,7 @@
 # RPiKernel
+
+*LEGACY REPOSITORY FOR PATCHES ETC.*
+
 Sources of the current kernel used for the DroneBridge Raspberry Pi images &amp; its patch files.
 Kernel source files contain the https://github.com/aircrack-ng/rtl8812au driver. It is experimental and not patched to output max power. Current branch is 5.20.x.
 You might want to update the files in the `/drivers/net/wireless/rtl8812au` folder
